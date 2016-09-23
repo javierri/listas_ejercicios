@@ -1,4 +1,5 @@
 #CLASE NODO
+#https://repl.it/DfsJ
 class Nodo:
 	def __init__ (self, valor):
 		self.info = valor
