@@ -1,0 +1,28 @@
+#CLASE NODO
+#https://repl.it/Dfrf/1
+class Nodo:
+	def __init__ (self, valor):
+		self.info = valor
+		self.sig = None
+	
+# CLASE LISTA
+class Lista:
+	
+	# CONSTRUCTOR
+	def __init__ (self):
+		self.__primero = None
+		self.__ultimo = None
+		self.__actual = None
+		self.__n = 0
+		self.__pos = 0
+
+# Metodo para verificar si hay elementos repetidos
+	def elementos_repetidos(self):
+		for i in range(self.__n):
+			j = i
+			
+			while(j < self.__n):
+				if ((self.pos_actual(j).info == self.pos_actual(i).info) and (j != i)):
+					return True
+				j = j + 1
+		return False
