@@ -1,0 +1,33 @@
+# CLASE NODO
+#https://repl.it/Dfrf/2
+class Nodo:
+	def __init__ (self, valor):
+		self.info = valor
+		self.sig = None
+	
+# CLASE LISTA
+class Lista:
+	
+	# CONSTRUCTOR
+	def __init__ (self):
+		self.__primero = None
+		self.__ultimo = None
+		self.__actual = None
+		self.__n = 0
+		self.__pos = 0
+		
+# Metodo para ordenar la lista por seleccion
+	def ordenarRN(self):
+		for i in range(self.__n):
+			j = i
+			menor = self.pos_actual(i)
+			while (j < self.__n):
+				if (self.pos_actual(j).info < menor.info):
+					menor = self.pos_actual(j)
+					posicion = j
+				j = j + 1	
+				
+			if (menor.info < self.pos_actual(i).info):
+				temporal = self.pos_actual(i).info
+				self.pos_actual(i).info = menor.info
+				self.pos_actual(posicion).info = temporal
