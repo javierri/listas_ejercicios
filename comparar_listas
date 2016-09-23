@@ -1,0 +1,34 @@
+#CLASE NODO
+#https://repl.it/DfsJ
+class Nodo:
+	def __init__ (self, valor):
+		self.info = valor
+		self.sig = None
+	
+# CLASE LISTA
+class Lista:
+	
+	# CONSTRUCTOR
+	def __init__ (self):
+		self.__primero = None
+		self.__ultimo = None
+		self.__actual = None
+		self.__n = 0
+		self.__pos = 0
+
+# Metodo que devuelve el valor de n
+	def n(self):
+		return self.__n
+
+# Metodo para comparar esta lista con otra
+	def comparar_listas(self, l2):
+		cont = 0
+		if (l2.n() == self.__n):
+			
+			for i in range(self.__n):
+				if (l2.pos_actual(i) == self.pos_actual(i)):
+					cont = cont + 1
+		if (cont == self.__n):
+			return True
+		else:
+			return False
