@@ -1,0 +1,25 @@
+#CLASE NODO
+class Nodo:
+	def __init__ (self, valor):
+		self.info = valor
+		self.sig = None
+	
+# CLASE LISTA
+class Lista:
+	
+	# CONSTRUCTOR
+	def __init__ (self):
+		self.__primero = None
+		self.__ultimo = None
+		self.__actual = None
+		self.__n = 0
+		self.__pos = 0
+
+		
+	# Metodo para eliminar la mitad de elementos de la Lista
+	def eliminar_mitad(self):
+		mitad= self.__n/2
+		i = 0
+		while(i < mitad):
+			self.eliminar_primero()
+			i = i + 1 
