@@ -1,0 +1,28 @@
+#CLASE NODO
+#https://repl.it/DfsJ
+class Nodo:
+	def __init__ (self, valor):
+		self.info = valor
+		self.sig = None
+	
+# CLASE LISTA
+class Lista:
+	
+	# CONSTRUCTOR
+	def __init__ (self):
+		self.__primero = None
+		self.__ultimo = None
+		self.__actual = None
+		self.__n = 0
+		self.__pos = 0
+
+# Metodo para sumar todos los elementos de la Lista
+	def sumar(self):
+		nodo = self.__primero
+		suma = 0 
+		for i in range(self.__n):
+			if (type(nodo.info)==int):
+				suma = suma + nodo.info
+			nodo = nodo.sig 
+			
+		return suma
